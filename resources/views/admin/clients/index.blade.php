@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">{{ __('Liste des clients') }}</div>
                 <div class="text-md-right mt-3 mr-3">
@@ -32,7 +32,7 @@
                                 <td>{{ $client->numero }}</td>
                                 <td><img src="/storage/images/clients/{{$client->photo}}" width="40px"  style="border-radius: 100%;" alt=""></td>
                                 <td>{{ $client->sexe }}</td>
-                                <td style="display:inline-flex">
+                                <td >
                                     @can('manager-clients')
                                         <a href="{{ route('admin.clients.edit', $client->id) }}"><i class="fas fa-user-edit"  style='font-size:20px;'></i></a>
                                     @endcan

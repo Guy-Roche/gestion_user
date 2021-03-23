@@ -8,7 +8,7 @@
                 <div class="card-header">Modifier un client <strong>{{ $client->name }}</strong></strong></div>
 
                 <div class="card-body">
-                    <form action="{{ route('admin.clients.update', $client)}}" method="POST">
+                    <form enctype="multipart/form-data" action="{{ route('admin.clients.update', $client)}}" method="POST">
 
                         @csrf
                         @method('PATCH')
